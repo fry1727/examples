@@ -1,0 +1,67 @@
+query getNotifications {
+   viewer {
+        notificationUsers(first: %d, type: %@, excludeIds: %@) {
+                  edges {
+        node {
+          id
+          firstName
+          online
+          ownWords
+          city {
+            countryName
+            name
+          }
+          sex
+          fullYears
+          photos {
+              edges {
+                node {
+                    id
+                    main
+                    preview: preview(size: "iphone_new_small") {
+                        url
+                    }
+                    big: preview(size: "iphone_new_big") {
+                        url
+                    }
+                }
+            }
+          }
+          socialInfo {
+                    intent
+                    relationshipStatus
+                    ethnicity
+                    kidsAtHome
+                    wantsKids
+                    education
+                    bodyType
+                    }
+          interests
+          viewerRelated {
+              userWinkedViewer
+              winked
+              faved
+              canSendMessage
+              userLikedViewer
+              liked
+              userFavedViewer
+              userWantsChatViewer
+              notifications {
+                        photoLike{
+                            unreadCount
+                        }
+                        favorite{
+                            unreadCount
+                        }
+                        profileVisit{
+                            unreadCount
+                        }
+                    }
+          }
+        }
+      }
+        }
+  }
+}
+
+

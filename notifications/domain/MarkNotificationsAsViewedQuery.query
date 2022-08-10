@@ -1,0 +1,9 @@
+mutation markAsViewed($input: MarkNotificationAsViewedMutationInput!) {
+    markNotificationAsViewed(input: $input) {
+       errors {
+          key
+          message
+        }
+    }
+}
+
