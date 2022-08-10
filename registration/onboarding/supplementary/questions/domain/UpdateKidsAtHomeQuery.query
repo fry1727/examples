@@ -1,0 +1,8 @@
+mutation updateProfile($input: UpdateProfileMutationInput!) {
+  updateProfile(input: $input) {
+    errors {
+      key
+      message
+    }
+    }
+  }

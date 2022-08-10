@@ -1,0 +1,17 @@
+mutation generateAccessToken($input: GenerateAccessTokenMutationInput!) {
+    generateAccessToken(input:$input) {
+    clientMutationId,
+    viewer {
+      accessToken
+      profile {
+        id
+        isVip
+      }
+    },
+    errors {
+      key,
+      message
+    }
+  }
+}
+

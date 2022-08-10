@@ -1,0 +1,8 @@
+mutation addInstallationInfo($input: AddInstallationInfoMutationInput!) {
+    addInstallationInfo(input:$input) {
+    errors {
+      key
+      message
+    }
+  }
+}

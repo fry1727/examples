@@ -1,0 +1,10 @@
+query authExists {
+    viewer {
+        authExists(email: "%@", utmSource: "%@")
+        validateEmail(email: "%@")
+    },
+    errors {
+        key,
+        message
+    }
+}

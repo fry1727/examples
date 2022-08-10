@@ -1,0 +1,17 @@
+mutation finishRegistrationMutation($input: FinishRegistrationMutationInput!) {
+    finishRegistration(input:$input) {
+        clientMutationId,
+        viewer {
+            accessToken
+            profile {
+                finishedRegistrationDt
+                id
+                isVip
+            }
+        },
+        errors {
+            key,
+            message
+        }
+    }
+}

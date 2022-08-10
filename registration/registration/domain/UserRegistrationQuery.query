@@ -1,0 +1,20 @@
+mutation registration($input: UserRegistrationMutationInput!) {
+    userRegistration(input:$input) {
+    clientMutationId,
+    profileCreated,
+    reactivationReg,
+    viewer {
+      accessToken
+      profile {
+        id
+        isVip
+        sex
+        lookingFor
+      }
+    },
+    errors {
+      key,
+      message
+    }
+  }
+}
