@@ -1,0 +1,9 @@
+mutation addFavorite($input: AddFavoriteMutationInput!) {
+  addFavorite(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}
+

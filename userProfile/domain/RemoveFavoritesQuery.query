@@ -1,0 +1,8 @@
+mutation removeFavorite($input: RemoveFavoriteMutationInput!) {
+  removeFavorite(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}

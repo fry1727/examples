@@ -1,0 +1,9 @@
+mutation wantsChat($input: DelayedChatMutationInput!) {
+  delayedChat(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}
+

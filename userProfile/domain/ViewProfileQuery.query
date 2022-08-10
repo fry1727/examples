@@ -1,0 +1,8 @@
+mutation viewProfile($input: ViewProfileMutationInput!) {
+  viewProfile(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}
