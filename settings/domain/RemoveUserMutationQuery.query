@@ -1,0 +1,8 @@
+mutation removeUser($input: RemoveUserMutationInput!) {
+    removeUser(input: $input) {
+      errors {
+          key
+          message
+        }
+    }
+}

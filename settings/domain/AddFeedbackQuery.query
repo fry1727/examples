@@ -1,0 +1,8 @@
+mutation addFeedback($input: AddFeedbackMutationInput!) {
+    addFeedback(input: $input) {
+    errors {
+      key
+      message
+    }
+    }
+}

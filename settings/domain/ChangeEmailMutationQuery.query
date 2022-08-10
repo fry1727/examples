@@ -1,0 +1,9 @@
+mutation changeEmail($input: ChangeEmailMutationInput!) {
+  changeEmail(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}
+
