@@ -1,0 +1,93 @@
+query getMyProfile {
+   viewer {
+    profile {
+      id
+      email
+      firstName
+      birthdate
+      fullYears
+      sex
+      ownWords
+      isVip
+      vipDaysCount
+      nextGiftDt
+      lookingFor
+      finishedRegistrationDt
+      autoreply
+      seekingAgeFrom
+      seekingAgeTo
+      interests
+      experiments {
+         name
+         params
+      }
+      usedTrial
+      counters {
+        newMessagesCount
+        newFavAddCount
+        newPhotoLikesCount
+        newGuestsCount
+        newNotificationsCount
+     }
+      city {
+        id
+        countryName
+        name
+      }
+      preferences {
+            pushNotifications
+      }
+      searchSettings {
+        ageFrom
+        ageTo
+        city {
+            id
+            name
+        }
+        distance
+        sex
+        sexAll
+        intent
+        relationshipStatus
+        ethnicity
+        kidsAtHome
+        wantsKids
+        education
+        bodyType
+      }
+      interests
+      socialInfo {
+          intent
+          relationshipStatus
+          ethnicity
+          kidsAtHome
+          wantsKids
+          education
+          bodyType
+      }
+      photos {
+        edges {
+          node {
+            id
+            main
+            preview: preview(size: "iphone_new_small") {
+              url
+            }
+            big: preview(size: "iphone_new_big") {
+              url
+            }
+          }
+        }
+      }
+    }
+     blockedUsers(first: 20) {
+        edges {
+            node {
+                firstName
+                id
+            }
+        }
+    }
+  }
+}
+

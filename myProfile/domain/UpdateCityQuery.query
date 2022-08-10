@@ -1,0 +1,51 @@
+mutation updateProfile($input: UpdateProfileMutationInput!) {
+  updateProfile(input: $input) {
+    errors {
+      key
+      message
+    }
+      viewer {
+    profile {
+      id
+      email
+      firstName
+      birthdate
+      fullYears
+      sex
+      online
+      isVip
+      vipDaysCount
+      nextGiftDt
+      ownWords
+      lookingFor
+      autoreply
+      seekingAgeFrom
+      seekingAgeTo
+      experiments {
+         name
+         params
+      }
+      usedTrial
+      city {
+        id
+        countryName
+        name
+      }
+      photos {
+        edges {
+          node {
+            id
+            main
+            preview: preview(size: "iphone_new_small") {
+              url
+            }
+            big: preview(size: "iphone_new_big") {
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+  }
+}

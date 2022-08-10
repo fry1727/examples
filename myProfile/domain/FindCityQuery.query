@@ -1,0 +1,11 @@
+query findCity{
+    viewer{
+            cities(prefix: "%@"){
+            id
+            name
+            countryName
+            countryCode
+            regionName
+        }
+    }
+}

@@ -1,0 +1,9 @@
+mutation removePhoto($input: RemovePhotoMutationInput!) {
+  removePhoto(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}
+

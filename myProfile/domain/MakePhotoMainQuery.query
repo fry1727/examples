@@ -1,0 +1,8 @@
+mutation makePhotoMain($input: MakePhotoMainMutationInput!) {
+  makePhotoMain(input: $input) {
+    errors {
+      key
+      message
+    }
+  }
+}
